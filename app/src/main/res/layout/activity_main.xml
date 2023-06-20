@@ -26,7 +26,14 @@
             android:id="@+id/rvNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnShowFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Important"/>
     </LinearLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAddNote"

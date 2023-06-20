@@ -10,6 +10,7 @@ import com.aminivan.noteroom.database.entity.Note
 import com.aminivan.noteroom.databinding.ActivityMainBinding
 import com.aminivan.noteroom.helper.ViewModelFactory
 import com.aminivan.noteroom.view.AddNotesActivity
+import com.aminivan.noteroom.view.ImportantActivity
 import com.aminivan.noteroom.viewmodel.NoteViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +35,10 @@ class MainActivity : AppCompatActivity() {
     private fun initListener() {
         binding.btnAddNote.setOnClickListener(){
             val intent = Intent(this,AddNotesActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnShowFavorites.setOnClickListener {
+            val intent = Intent(this,ImportantActivity::class.java)
             startActivity(intent)
         }
     }

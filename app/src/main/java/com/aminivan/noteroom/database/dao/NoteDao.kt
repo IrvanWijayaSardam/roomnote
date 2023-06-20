@@ -17,6 +17,9 @@ interface NoteDao {
     @Query("SELECT * FROM note ORDER BY id DESC")
     fun getDataNotes() : LiveData<List<Note>>
 
+    @Query("SELECT * FROM note WHERE isImportant = 1 ORDER BY id DESC")
+    fun getImportantNotes() : LiveData<List<Note>>
+
     @Update
     fun update(note: Note)
 

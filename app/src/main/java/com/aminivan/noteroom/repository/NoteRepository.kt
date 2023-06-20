@@ -30,4 +30,7 @@ class NoteRepository(application: Application) {
     }
 
     fun getDataNotes() : LiveData<List<Note>> = mNotesDao.getDataNotes()
+
+    fun getImportantNotes() : LiveData<List<Note>> = mNotesDao.getImportantNotes()
+
 }

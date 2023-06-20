@@ -24,4 +24,7 @@ class NoteViewModel(application: Application) : ViewModel() {
 
     fun getDataNotes() : LiveData<List<Note>> =
         mNoteRepository.getDataNotes()
+
+    fun getImportantNotes() : LiveData<List<Note>> =
+        mNoteRepository.getImportantNotes()
 }
